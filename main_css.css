@@ -339,6 +339,9 @@ img.alignleft, img.alignnone {
     width: 0;
     height: 0;
 }
+#linkShowAll, #linkHideAll{
+	cursor:pointer;
+}
 #metrowrapper{
     overflow: scroll;
 }
