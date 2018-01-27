@@ -1,3 +1,4 @@
+(function ($){
 /* Show/hide column Дата открытия*/
 $("#cbxOpen").on("click", function(){
 		if ($("#cbxOpen").is(":checked")) {
@@ -142,3 +143,5 @@ $("#cbxDeep").on("click", function(){
 				$("#metroStats tfoot tr th:nth-child(15)").hide(500);
 		};
 });
+	
+})(jQuery);
