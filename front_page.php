@@ -148,12 +148,14 @@ foreach ($tmp_colors as $result) {
                     <h1 class="block_title big"><?php if(get_field($h1)): the_field($h1); else: wp_title(''); endif;?></h1>
                     <div class="main_page_blocks">
                         <?php 
-                            $args = array (
+						
+/* Массив арг для вывода статей------                   */
+						$args = array (
                                 'post_type' => 'post',
                                 'posts_per_page' => get_field($articlesCount),
                                 'offset' => 0,
 								'cat' => '',
-                                /*'category__in' => get_field($articlesCategories),*/
+                                'category__in' => get_field($articlesCategories),
                                 'post_status' => 'publish',
 								/*'orderby' => 'title',*/
 								/*'order' => 'DESC',*/
@@ -209,38 +211,29 @@ foreach ($tmp_colors as $result) {
                                 'post_type' => 'post',
                                 'posts_per_page' => get_field($articlesCount),
                                 'offset' => 0,
-								'cat' => '20',
-                                /*'category__in' => get_field($articlesCategories),*/
+                                'category__in' => array(20),
                                 'post_status' => 'publish',
-								/*'orderby' => 'title',*/
-								/*'order' => 'DESC',*/
-                            );
-
-
-
-
-
-
-
-
-
-								  /* Исправляем ссылки изображения титулы и спец поля посреством the_field() - get_field() вместе с echo*/
-                            global $posts_query;
+								'meta_key' => 'start_date',
+								'meta_value' => date( "Ymd" ), 
+								'meta_compare' => '>',  
+								'orderby' => 'meta_value',
+								'order' => 'ASC',
+                           		 );
+																								
+                               global $posts_query;
                             $posts_query = new WP_Query($args3);
                             while ($posts_query->have_posts()) : $posts_query->the_post(); 
-								$post_meta = get_post_meta($post->ID, 'start_date', false);
-                               /* if( have_rows($events) ):
-                                    while ( have_rows($events) ) : the_row();*/ ?>
+								$post_meta = get_post_meta($post->ID, 'start_date', false); ?>
                                     <div class="dt main_page_event_block">
                                         <div class="dtc vat main_page_event_block_img">
-                                            <a href="<?php the_permalink();/*the_sub_field('link')*/?>"><img src="<?php the_sub_field('img')?>" alt=""/></a>
+											<a href="<?php the_permalink();?>"><?php the_post_thumbnail('catalog-thumb')?></a>
                                         </div>
                                         <div class="dtc vat main_page_event_block_info">
-                                            <p class="main_page_event_date"><?php the_field('date',$post->ID, true);/*the_sub_field('date')*/?></p>
-                                            <p><a href="<?php the_permalink();/*the_sub_field('link')*/?>"><?php the_title()/*the_sub_field('title')*/?></a></p>
+                                            <p class="main_page_event_date">С <?php the_field('start_date',$post->ID, true);?> по <?php the_field('finish_date',$post->ID, true);?></p>
+                                            <p><a href="<?php the_permalink();?>"><?php the_title();?></a></p>
                                         </div><!--/.main_page_event_block_info-->
                                     </div><!--/.main_page_event_block-->    
-                                <?php   endwhile; 
+                                <?php   endwhile; wp_reset_postdata();
                                    /* endif;*/
                                 ?>
                             </div><!--/.main_page_event_blocks-->
