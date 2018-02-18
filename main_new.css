@@ -1,4 +1,4 @@
-/* @Dispetcher, last edited 17.02*/
+/* @Dispetcher, last edited 18.02*/
 
 html {
     color: #222;
@@ -1940,8 +1940,7 @@ span .wpcf7-list-item label {
 }
 .subscribe_content__block__form{
     padding:20px 80px;
-    background-color:#eaecee;
-    opacity:0.8;
+    background-color:rgba(234,236,238,0.8);
 }
 .subscribe_content_font{
     color:#204f6e;
@@ -1992,6 +1991,26 @@ span .wpcf7-list-item label {
 }
 .social_net__tw{
     background: url(http://undergroundexpert.info/wp-content/themes/shablon/share42/icons.png) -108px 0 no-repeat;
+}
+.subscribe_sc_content__block__form{
+    padding:80px 60px;
+    background-color:rgba(234,236,238,0.8);
+}
+.subscribe_sc_content_font{
+    color:#204f6e;
+    font-family:'PT_Sans_Bold';
+    text-align:center;
+    margin-bottom:0;
+}
+.sub_sc_head{
+    font-size:22pt;
+}
+.sub_sc_second{
+    font-size:18pt;
+}
+.sub_sc_footer{
+    margin-top:40px;    
+    font-size:10pt;
 }
 /* ==========================================================================
    Media Queries
