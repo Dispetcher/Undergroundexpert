@@ -22,7 +22,7 @@ $cl = pll_current_language();
 			<h6 class="subscribe_sc_content_font unsub_sc_footer">
 				Чтобы снова оформить подписку <a href="">перейдите по ссылке</a>
 			</h6>
-		</div><!--/.subscribe_sc_content__block__form-->
+		</div><!--/.unsubscribe_sc_content__block__form-->
 	</div><!--/.subscribe_content__block-->		
 </div><!--/.subscribe_content-->	
 <?php get_footer();?>
