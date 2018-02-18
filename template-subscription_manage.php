@@ -1,12 +1,12 @@
 <?php get_header();
 /*
-Template Name: Страница отписки на рассылку
+Template Name: Страница управления подпиской
 */
 $cl = pll_current_language();
 ?>
 <div class="subscribe_content">
 	<div class="subscribe_content__block">
-		<div class="unsubscribe_sc_content__block__form">
+		<div class="subscribe_content__block__form">
 
 
 
@@ -17,7 +17,7 @@ $cl = pll_current_language();
 
 
 
-		</div><!--/.unsubscribe_sc_content__block__form-->
+		</div><!--/.subscribe_content__block__form-->
 	</div><!--/.subscribe_content__block-->		
 </div><!--/.subscribe_content-->	
 
