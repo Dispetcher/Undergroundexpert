@@ -2,7 +2,8 @@
 /*
 Template Name: Подписаться на рассылку
 */
-get_header();?>
+get_header();
+$cl = pll_current_language();?>
 <?php get_template_part('includes/breadcrumbs')?>
  <div id="content_section">
    <div class="center_wrap">
@@ -10,7 +11,7 @@ get_header();?>
             <div class="dtc vat content_column subscribe_page">
                 <h1 class="block_title big"><?php the_title('')?></h1>
                 <div class="page_content">
-                    <div class="subscribe_agree_form">   
+                    <div class="subscribe_agree_form">  
 						<?php 
 						//es_subbox($namefield = "YES", $desc = "", $group = "Public"); 
 					    	$subscribe_html = do_shortcode('[email-subscribers namefield="YES" desc="" group="Public"]');
@@ -21,10 +22,10 @@ get_header();?>
 								$subscribe_html = str_replace('value="Subscribe"','value="Подписаться"', $subscribe_html);
 								$PDprocess = "i_agree_pd_process";
 							}
-							echo $subscribe_html;
+							echo $subscribe_html;			
 						?>
-
-<!--<div class="subscribe_content">
+<!--
+<div class="subscribe_content">
 	<div class="subscribe_content__block">
 		<div class="subscribe_content__block__form">
 			<h3 class="subscribe_content_font sub_head">
@@ -34,27 +35,43 @@ get_header();?>
 				подземного строительства и проектирования в почте!
 			</h4>
 			<span class="subscribe_content_font sub_above_field">Остался всего один шаг, укажите свой email:</span>
-	<?php		
-	/*	$form_widget = new \MailPoet\Form\Widget();
+	<?php	/*	
+		$form_widget = new \MailPoet\Form\Widget();
 			echo $form_widget->widget(array('form' => 2, 'form_type' => 'php'));	*/
 	?>
+			<span class="subscribe_content_font sub_under_field">Подписываясь на рассылку, вы подтверждаете свое согласие на <a href="http://undergroundexpert.info/politika-konfidentsialnosti/">обработку персональных данных</a></span>
+			<h4 class="subscribe_content_font sub_social_net">Следите за обновлениями портала "Подземный эксперт" в соцсетях!</h4>
+			<div class="subscribe_content_font social_net">
+				<h3 class="subscribe_content_font social_net__text">
+					Присоединяйтесь к нам:
+				</h3>
+				<span>
+				<a href="https://www.facebook.com/%D0%9F%D0%BE%D0%B4%D0%B7%D0%B5%D0%BC%D0%BD%D1%8B%D0%B9-%D1%8D%D0%BA%D1%81%D0%BF%D0%B5%D1%80%D1%82-1405490429518955/" class="social_networks social_net__fb"></a>
+				<a href="https://vk.com/uexpert" class="social_networks social_net__vk"></a>
+				<a href="https://twitter.com/UExpertInfo" class="social_networks social_net__tw"></a>
+				</span>
+			</div>
 		</div>
 	</div>		
 -->		
 		
 						<?php
-						$cl = pll_current_language();
-						//if ($cl == 'ru') {
-						/*	$form_widget = new \MailPoet\Form\Widget();
+					/*	
+						if ($cl == 'ru') {
+							$form_widget = new \MailPoet\Form\Widget();
 							echo $form_widget->widget(array('form' => 2, 'form_type' => 'php'));	
 							$PDprocess = "i_agree_pd_process";
-					/*	}else{
-						$form_widget = new \MailPoet\Form\Widget();
+						}else{
+						/*$form_widget = new \MailPoet\Form\Widget();
 						echo $form_widget->widget(array('form' => 3, 'form_type' => 'php'));
 						$PDprocess = "i_agree_pd_process-eng";
-						};*/
+						};
+						$widgetNL = new WYSIJA_NL_Widget(true);
+echo $widgetNL->widget(array('form' => 2, 'form_type' => 'php'));
+						}*/
+						
 						?>
-					</div>
+</div>
 				<div class="subscribe_agree_wrap">
 						<div class="subscribe_agree_head">
 							<label for="subscribe_agree_check">
@@ -74,9 +91,9 @@ get_header();?>
 						</div>					
 					</div>
                 </div><!--/.page_content-->
-       </div><!--/.dtc.content_column-->
-    		  <?phpget_sidebar();?>
-       </div><!--/.dt-->
+    </div><!--/.dtc.content_column-->
+    		  <?php get_sidebar();?>
+      </div><!--/.dt-->
  </div><!--/.center_wrap-->
 </div><!--/#content_section-->
 <?php get_footer();?>
