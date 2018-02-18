@@ -34,9 +34,9 @@ if ($cl == 'ru') {
     $lastEvents = "popular_events-eng";
     $lastEventsSubscribe = "last_events_subscribe_button_text-eng";
     $lastEventsSubscribeLink = "last_events_subscribe_button_link-eng";
-	$articlesCategories = "article_categories-eng";
-	$articlesCount = "articles_count-eng";
-	$articlesColors = "articles_colors-eng";
+    $articlesCategories = "article_categories-eng";
+    $articlesCount = "articles_count-eng";
+    $articlesColors = "articles_colors-eng";
     $moreArticles = "more_articles_button-eng";
     $foldArticles = "fold_articles_button-eng";
     $calendarTitle = "calendar_title-eng";
@@ -148,17 +148,17 @@ foreach ($tmp_colors as $result) {
                     <h1 class="block_title big"><?php if(get_field($h1)): the_field($h1); else: wp_title(''); endif;?></h1>
                     <div class="main_page_blocks">
                         <?php 
-						
+                        
 /* Массив арг для вывода статей------                   */
-						$args = array (
+                        $args = array (
                                 'post_type' => 'post',
                                 'posts_per_page' => get_field($articlesCount),
                                 'offset' => 0,
-								'cat' => '',
+                                'cat' => '',
                                 'category__in' => get_field($articlesCategories),
                                 'post_status' => 'publish',
-								/*'orderby' => 'title',*/
-								/*'order' => 'DESC',*/
+                                /*'orderby' => 'title',*/
+                                /*'order' => 'DESC',*/
                             );
                             global $posts_query;
                             $posts_query = new WP_Query($args);
@@ -167,7 +167,7 @@ foreach ($tmp_colors as $result) {
                                     <div class="main_page_block_img">
                                         <a href="<?php the_permalink();?>"><?php the_post_thumbnail('catalog-thumb')?></a>
                                             <?php
-	/*
+    /*
                                                 $parent_cats = get_the_category($post->ID); //Получили список родительских категорий поста
                                                 $first_level_parent_cat_id = -1; //Ищем ID родительской категории первого уровня
                                                 $first_level_parent_cat_name = '!';
@@ -177,10 +177,10 @@ foreach ($tmp_colors as $result) {
                                                         $first_level_parent_cat_name = $parent_cat->name;
                                                     }
                                                 endforeach;
-												*/
-												$parent_cat = get_the_category($post->ID);
-												$parent_cat_id = $parent_cat[0]->term_id;
-												$parent_cat_name = $parent_cat[0]->name;
+                                                */
+                                                $parent_cat = get_the_category($post->ID);
+                                                $parent_cat_id = $parent_cat[0]->term_id;
+                                                $parent_cat_name = $parent_cat[0]->name;
                                             ?>
                                             
                                                 <div class="main_page_block_cat" style="background-color: <?php if(isset($colors[$parent_cat_id])): echo $colors[$parent_cat_id]; else: echo 'green'; endif;?>;">
@@ -207,29 +207,28 @@ foreach ($tmp_colors as $result) {
                             <p class="block_title"><a href="<?php the_field($calendarLink);?>"><?php the_field($calendarTitle);?></a></p>
                             <div class="main_page_event_blocks">
                                 <?php
-								  $args3 = array (
+                                  $args3 = array (
                                 'post_type' => 'post',
                                 'posts_per_page' => get_field($articlesCount),
                                 'offset' => 0,
                                 'category__in' => array(20),
                                 'post_status' => 'publish',
-								'meta_key' => 'start_date',
-								'meta_value' => date( "Ymd" ), 
-								'meta_compare' => '>',  
-								'orderby' => 'meta_value',
-								'order' => 'ASC',
-                           		 );
-																								
+                                'meta_key' => 'start_date',
+                                'meta_value' => date( "Ymd" ), 
+                                'meta_compare' => '>',  
+                                'orderby' => 'meta_value',
+                                'order' => 'ASC',
+                                 );
+                                                                                                
                                global $posts_query;
                             $posts_query = new WP_Query($args3);
-                            while ($posts_query->have_posts()) : $posts_query->the_post(); 
-								$post_meta = get_post_meta($post->ID, 'start_date', false); ?>
+                            while ($posts_query->have_posts()) : $posts_query->the_post(); ?>
                                     <div class="dt main_page_event_block">
                                         <div class="dtc vat main_page_event_block_img">
-											<a href="<?php the_permalink();?>"><?php the_post_thumbnail('catalog-thumb')?></a>
+                                            <a href="<?php the_permalink();?>"><?php the_post_thumbnail('catalog-thumb')?></a>
                                         </div>
                                         <div class="dtc vat main_page_event_block_info">
-                                            <p class="main_page_event_date">С <?php the_field('start_date',$post->ID, true);?> по <?php the_field('finish_date',$post->ID, true);?></p>
+                                            <p class="main_page_event_date"><?php the_field('dates',$post->ID, true);?></p>
                                             <p><a href="<?php the_permalink();?>"><?php the_title();?></a></p>
                                         </div><!--/.main_page_event_block_info-->
                                     </div><!--/.main_page_event_block-->    
