@@ -378,5 +378,15 @@
 				$('#fbbtn').attr('disabled', 'disabled');	
 				};
 		});*/
+		//Redirect to reg-successful page
+		//Получаем св-во об успешной регистрации
+		$(".mailpoet_submit").on('click', function(){
+			setTimeout(function(){
+				var reg_display = $(".mailpoet_validate_success").css("display");
+				if(reg_display === "block"){
+					$(location).attr(href, "http://undergroundexpert.info/podpisatsya-na-rassylku/registration-successfully/");
+				}
+			}, 5000);
+		});		
     });
 })(jQuery);

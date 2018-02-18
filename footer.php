@@ -20,6 +20,7 @@ if ($cl == "ru") {
 <?php if ($id == '235'){
 	}elseif ($id == '10001'){
 	}elseif ($id == '10005'){
+	}elseif ($id == '10071'){
 	}else{
 ?>
 
