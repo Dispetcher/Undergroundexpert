@@ -17,6 +17,12 @@ if ($cl == "ru") {
 	$comment = "Post the comment:";
 }
 ?>
+<?php if ($id == '235'){
+	}elseif ($id == '10001'){
+	}elseif ($id == '10005'){
+	}else{
+?>
+
 <footer id="footer">
             <div class="center_wrap">
                 <div class="dt footerflex">
@@ -93,6 +99,7 @@ if ($cl == "ru") {
 				</div>
 			</div>
 		</div>
+<?php }; ?>
 
 		<?php wp_footer()?>
         <script src="<?php bloginfo('template_url')?>/js/owlcarousel/owl.carousel.min.js"></script>
