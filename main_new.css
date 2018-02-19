@@ -1,4 +1,4 @@
-/* @Dispetcher, last edited 17.02*/
+/* @Dispetcher, last edited 19.02*/
 
 html {
     color: #222;
@@ -1941,7 +1941,7 @@ span .wpcf7-list-item label {
 	height:100%;
 }
 .subscribe_content__block__form{
-	padding:20px 80px;
+	padding:40px 80px;
 	background-color:rgba(234,236,238,0.8);
 }
 .subscribe_content_font{
@@ -1950,12 +1950,13 @@ span .wpcf7-list-item label {
 	text-align:justify;
 }
 .sub_head{
-	font-size:22pt;
+	font-size:24pt;
+	letter-spacing:0.8px;
 	margin:0;
 }
 .sub_second{
-	font-size:16pt;
-	letter-spacing:1.2px;
+	font-size:20pt;
+	letter-spacing:0.1px;
 	margin-bottom:40px;
 }
 .sub_above_field{
@@ -1964,6 +1965,19 @@ span .wpcf7-list-item label {
 .sub_under_field{
 	font-size:9pt;
 	letter-spacing:0.5px;
+}
+.sub_under_field a{
+	color:#1da4df;
+}
+.sub_ft_field{
+	margin-top:30px;
+	margin-bottom:0;
+	font-size:11pt;
+	letter-spacing:0.2px;
+}
+.sub_ft{
+	margin-top:2px;
+	letter-spacing:1.1px;
 }
 .sub_social_net{
 	font-size:14pt;
@@ -1994,7 +2008,12 @@ span .wpcf7-list-item label {
 .social_net__tw{
 	background: url(http://undergroundexpert.info/wp-content/themes/shablon/share42/icons.png) -108px 0 no-repeat;
 }
-
+.sub_mobile{
+	display:none;
+}
+.sub_mb_ft{
+	display:none;
+}
 
 /******              Successful subscription page            *******/
 .subscribe_sc_content__block__form{
@@ -2026,6 +2045,12 @@ span .wpcf7-list-item label {
 	font-size:18pt;
 	margin-bottom:8px;
 }
+.unsub_sc_frst{
+	letter-spacing:1.2px;
+}
+.unsub_sc_scnd{
+	letter-spacing:-0.8px;
+}
 .unsub_sc_thrd, .unsub_sc_forth{
 	font-size:22pt;
 }
@@ -2040,6 +2065,23 @@ span .wpcf7-list-item label {
 	margin-bottom:10px;
 }
 .unsub_sc_footer a{
+	color:#1da4df;
+}
+/******        Registration successfully        ******/
+.reg_head{
+	text-align:center;
+	font-size:20pt;
+}
+.reg_cont{
+	margin:0;
+	font-size:12pt;
+	text-align:center;
+}
+.reg_rows{
+	margin:10px;
+	font-size:11pt;
+}
+.reg_rows a{
 	color:#1da4df;
 }
 /* ==========================================================================
@@ -2337,6 +2379,39 @@ span .wpcf7-list-item label {
     .lsw-wrap {
 	margin-top: 5px;
     }
+	.subscribe_content{
+		width:100%;
+	}
+	/******           Subscription page            *******/
+	.subscribe_content__block__form{
+	padding:40px 20px;
+	}
+	.sub_head{
+	font-size:22pt;
+	letter-spacing:0.6px;
+	}
+	.sub_second{
+	font-size:18pt;
+	letter-spacing:0.1px;
+	}
+	.sub_above_field{
+	font-size:13pt;
+	}
+	.sub_under_field{
+	font-size:9pt;
+	letter-spacing:-0.15px;
+	}
+	.sub_ft_field{
+	font-size:10pt;
+	letter-spacing:0.1px;
+	}
+	.sub_ft{
+	letter-spacing:0.85px;
+	}
+	.sub_social_net{
+	font-size:12pt;
+	letter-spacing:0.3px;
+	}
 }
 @media (max-width: 599px) {
     .main_slide_over br {
@@ -2403,6 +2478,40 @@ span .wpcf7-list-item label {
 	}
 	.copyright {
 		padding-top: 15px;
+	}
+/******           Subscription page            *******/
+	.subscribe_content__block__form{
+	padding:40px 20px;
+	}
+	.sub_head{
+	font-size:18pt;
+	letter-spacing:0.6px;
+	}
+	.sub_second{
+	font-size:15pt;
+	letter-spacing:0.1px;
+	}
+	.sub_under_field{
+	font-size:8pt;
+	}
+	.sub_ft_field{
+	font-size:8pt;
+	letter-spacing:0.25px;
+	}
+	.sub_ft{
+	letter-spacing:0.9px;
+	}
+	.sub_social_net{
+	font-size:9.5pt;
+	letter-spacing:0.5px;
+	}
+	.sub_under_field{
+	display:none;
+	}
+	.sub_mobile{
+	display:block;
+	font-size:8.3pt;
+	margin:0;
 	}
 }
 @media (max-width: 479px) {
@@ -2497,7 +2606,66 @@ span .wpcf7-list-item label {
 		display: block;
 		margin-bottom: 10px;
 	}
+	/******           Subscription page            *******/
+	.subscribe_content__block__form{
+	padding:40px 10px;
+	}
+	.sub_head{
+	font-size:16pt;
+	letter-spacing:0;
+	text-align:center;
+	}
+	.sub_second{
+	font-size:12.5pt;
+	letter-spacing:0.25px;
+	text-align:center;
+	}
+	.sub_above_field{
+	font-size:10.5pt;
+	letter-spacing:0.25px;
+	text-align:center;
+	}
+	.sub_under_field{
+	font-size:8pt;
+	text-align:center;	
+	}
+	.sub_ft_field{
+	font-size:8pt;
+	letter-spacing:0.25px;
+	text-align:center;
+	}
+	.sub_ft{
+	letter-spacing:0.9px;
+	text-align:center;
+	}
+	.sub_social_net{
+	font-size:9.5pt;
+	letter-spacing:0.5px;
+	}
+	.sub_under_field{
+	display:none;
+	}
+	.sub_mobile{
+	display:block;
+	font-size:8pt;
+	margin-top:5px;
+	}
+	.sub_ft_field{
+	display:none;
+	}
+	.sub_ft_field.sub_mb_ft{
+	display:block;
+	}
 }
+@media(max-width:400px){
+.sub_head{
+	font-size:13pt;
+	}
+	.sub_second{
+	font-size:10pt;
+	}
+}
+
 @media print,
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),

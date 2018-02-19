@@ -4,8 +4,8 @@ Template Name: Подписаться на рассылку
 */
 get_header();
 $cl = pll_current_language();?>
-<?php get_template_part('includes/breadcrumbs')?>
- <div id="content_section">
+<?php// get_template_part('includes/breadcrumbs')?>
+<!-- <div id="content_section">
    <div class="center_wrap">
         <div class="dt">
             <div class="dtc vat content_column subscribe_page">
@@ -14,7 +14,7 @@ $cl = pll_current_language();?>
                     <div class="subscribe_agree_form">  
 						<?php 
 						//es_subbox($namefield = "YES", $desc = "", $group = "Public"); 
-					    	$subscribe_html = do_shortcode('[email-subscribers namefield="YES" desc="" group="Public"]');
+					    /*	$subscribe_html = do_shortcode('[email-subscribers namefield="YES" desc="" group="Public"]');
 							$cl = pll_current_language();
 							$PDprocess = "i_agree_pd_process-eng";
 							if ($cl == 'ru') {
@@ -22,24 +22,37 @@ $cl = pll_current_language();?>
 								$subscribe_html = str_replace('value="Subscribe"','value="Подписаться"', $subscribe_html);
 								$PDprocess = "i_agree_pd_process";
 							}
-							echo $subscribe_html;			
+							echo $subscribe_html;		*/	
 						?>
-<!--
+-->
 <div class="subscribe_content">
 	<div class="subscribe_content__block">
 		<div class="subscribe_content__block__form">
 			<h3 class="subscribe_content_font sub_head">
-				Теперь самые интересные статьи и новости
+				Только самые интересные материалы 
 			</h3>
 			<h4 class="subscribe_content_font sub_second">
-				подземного строительства и проектирования в почте!
+				о подземном проектировании и строительстве!
 			</h4>
-			<span class="subscribe_content_font sub_above_field">Остался всего один шаг, укажите свой email:</span>
-	<?php	/*	
+			<h4 class="subscribe_content_font sub_above_field">Остался всего один шаг, укажите свой e-mail:</h4>
+	<?php		
 		$form_widget = new \MailPoet\Form\Widget();
-			echo $form_widget->widget(array('form' => 2, 'form_type' => 'php'));	*/
+			echo $form_widget->widget(array('form' => 2, 'form_type' => 'php'));	
 	?>
 			<span class="subscribe_content_font sub_under_field">Подписываясь на рассылку, вы подтверждаете свое согласие на <a href="http://undergroundexpert.info/politika-konfidentsialnosti/">обработку персональных данных</a></span>
+			<h6 class="subscribe_content_font sub_under_field sub_mobile">Подписываясь на рассылку, вы подтверждаете свое согласие 	
+			</h6>
+			<h6 class="subscribe_content_font sub_under_field sub_mobile">на <a href="http://undergroundexpert.info/politika-konfidentsialnosti/">обработку персональных данных</a> 	
+			</h6>
+			
+			<h6 class="subscribe_content_font sub_ft_field">Рассылки от портала "Подземный эксперт" приходят не чаще одного раза в неделю 	
+			</h6>
+			<h6 class="subscribe_content_font sub_ft_field sub_ft">и содержат подборку лучших статей, опубликованных за последнее время.
+			</h6>
+			
+			<h6 class="subscribe_content_font sub_ft_field sub_mb_ft">Рассылки от портала "Подземный эксперт" приходят не чаще одного раза в неделю и содержат подборку лучших статей, опубликованных за последнее время. 	
+			</h6>
+			
 			<h4 class="subscribe_content_font sub_social_net">Следите за обновлениями портала "Подземный эксперт" в соцсетях!</h4>
 			<div class="subscribe_content_font social_net">
 				<h3 class="subscribe_content_font social_net__text">
@@ -53,8 +66,8 @@ $cl = pll_current_language();?>
 			</div>
 		</div>
 	</div>		
--->		
-		
+</div>	
+	
 						<?php
 					/*	
 						if ($cl == 'ru') {
@@ -71,29 +84,29 @@ echo $widgetNL->widget(array('form' => 2, 'form_type' => 'php'));
 						}*/
 						
 						?>
-</div>
-				<div class="subscribe_agree_wrap">
+
+	<!--			<div class="subscribe_agree_wrap">
 						<div class="subscribe_agree_head">
 							<label for="subscribe_agree_check">
 								<input type="checkbox" name="subscribe_agree_check" id="subscribe_agree_check">
-								<?php     the_field($PDprocess, 'options');?>
+								<?php   //  the_field($PDprocess, 'options');?>
 							</label>
 							<span class="open_subscribe_text"></span>
 						</div>
 						<div class="subscribe_agree_content">
-							<?php if (have_posts()) : ?>
+							<?php/* if (have_posts()) : ?>
 								<?php while (have_posts()) : the_post(); ?>
 									<?php the_content(''); ?>
 								<?php endwhile; ?>
 							<?php else : ?>
 								<h2 align="center"><?php echo ($cl == 'ru') ? "Не найдено" : "Not found"; ?></h2>
-							<?php endif;           ?>
+							<?php endif;         */  ?>
 						</div>					
 					</div>
                 </div><!--/.page_content-->
-    </div><!--/.dtc.content_column-->
-    		  <?php get_sidebar();?>
-      </div><!--/.dt-->
- </div><!--/.center_wrap-->
-</div><!--/#content_section-->
+<!--    </div><!--/.dtc.content_column-->
+    		  <?php// get_sidebar();?>
+<!--     </div><!--/.dt-->
+<!-- </div><!--/.center_wrap-->
+<!--</div><!--/#content_section-->
 <?php get_footer();?>
