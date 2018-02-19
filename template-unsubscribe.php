@@ -8,10 +8,13 @@ $cl = pll_current_language();
 	<div class="subscribe_content__block">
 		<div class="unsubscribe_sc_content__block__form">
 			<h4 class="subscribe_sc_content_font unsub_sc_frst">
-				Жаль... но Вы больше не сможете получать новости
+				Очень жаль, но Вы больше не сможете 
+			</h4>
+			<h4 class="subscribe_sc_content_font unsub_sc_frst">
+				получать подборку лучших материалов
 			</h4>
 			<h4 class="subscribe_sc_content_font unsub_sc_scnd">
-				подземного строительства и проектирования
+				 о подземном проектировании и строительстве
 			</h4>
 			<h3 class="subscribe_sc_content_font unsub_sc_thrd">
 				от портала "Подземный эксперт"
@@ -20,9 +23,9 @@ $cl = pll_current_language();
 				undergroundexpert.info
 			</h3>
 			<h6 class="subscribe_sc_content_font unsub_sc_footer">
-				Чтобы снова оформить подписку <a href="">перейдите по ссылке</a>
+				Чтобы снова оформить подписку <a href="http://undergroundexpert.info/podpisatsya-na-rassylku/">перейдите по ссылке</a>
 			</h6>
-		</div><!--/.unsubscribe_sc_content__block__form-->
+		</div><!--/.subscribe_sc_content__block__form-->
 	</div><!--/.subscribe_content__block-->		
 </div><!--/.subscribe_content-->	
 <?php get_footer();?>
