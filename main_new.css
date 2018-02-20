@@ -2706,22 +2706,23 @@ span .wpcf7-list-item label {
     .subscribe_content_font{
         width:290px;
     }
-}
-@media(orientation: landscape){
     .subscribe_content__block__form{
-        margin-top:0;
-        padding:20px 20px;
-    }
-    .sub_ft_field, .sub_social_net, .social_net{
-        display:none;
-    }
-    .sub_second{
-        margin-bottom:10px;
+        margin-left:-10px;
     }
 }
 @media (orientation: landscape) and (max-width:688px){
     .subscribe_content__block__form{
         margin-top:10px;
+    }
+    .sub_ft_field, .sub_social_net, .social_net{
+        display:none;
+    }
+    .subscribe_content__block__form{
+        margin-top:0;
+        padding:20px 20px;
+    }
+    .sub_second{
+        margin-bottom:10px;
     }
 }
 @media (orientation: landscape) and (max-width:569px){
