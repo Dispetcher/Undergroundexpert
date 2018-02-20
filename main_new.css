@@ -2305,6 +2305,11 @@ span .wpcf7-list-item label {
     .side_fixed {
         width: 100%;
     }
+/****    Subscription page   *****/ 
+    .subscribe_content__block__form{
+        margin-top:20px;
+    }
+    
 }
 @media(max-width:767px) {
     .breadcrumbs{
@@ -2663,23 +2668,65 @@ span .wpcf7-list-item label {
     .subscribe_content{
         height:100vh;
     }
+    .sub_social_net{
+    text-align:center;
+    }
 }
 @media(max-width:400px){
-.sub_head{
-    font-size:13pt;
+    .subscribe_content__block__form{
+        padding:15px 5px;
+    }
+    .sub_head{
+    font-size:12.5pt;
     }
     .sub_second{
-    font-size:10pt;
+    font-size:9.5pt;
     margin-bottom:10px;
     }
+    .sub_under_field{
+        font-size:7.5pt;
+    }
     .sub_ft_field{
-        margin-top:10px;
+    font-size:7.5pt;
+    letter-spacing:0;
+    margin-top:10px;
     }
     .sub_social_net{
+        font-size:9pt;
         margin-top:10px;
+    }
+    .sub_mobile{
+    font-size:7.5pt;
     }
     .subscribe_content{
         height:100vh;
+    }
+}
+@media(max-width:341px){
+    .subscribe_content_font{
+        width:290px;
+    }
+}
+@media(orientation: landscape){
+    .subscribe_content__block__form{
+        margin-top:0;
+        padding:20px 20px;
+    }
+    .sub_ft_field, .sub_social_net, .social_net{
+        display:none;
+    }
+    .sub_second{
+        margin-bottom:10px;
+    }
+}
+@media (orientation: landscape) and (max-width:688px){
+    .subscribe_content__block__form{
+        margin-top:10px;
+    }
+}
+@media (orientation: landscape) and (max-width:569px){
+    .subscribe_content__block__form{
+        margin-top:60px;
     }
 }
 @media print,
