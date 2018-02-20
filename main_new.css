@@ -2671,6 +2671,11 @@ span .wpcf7-list-item label {
 	.sub_social_net{
 	text-align:center;
 	}
+	
+	.subscribe_sc_content__block__form{
+		margin-left:0;
+		padding:40px 20px;
+	}
 }
 @media(max-width:400px){
 	.subscribe_content__block__form{
@@ -2707,6 +2712,11 @@ span .wpcf7-list-item label {
 	.social_net__text{
 		font-size:14pt;
 	}
+/******    Subscription successful    ****/
+	.subscribe_sc_content__block__form{
+		margin-left:0;
+		padding:40px 20px;
+	}
 }
 @media(max-width:341px){
 	.subscribe_content_font{
@@ -2714,6 +2724,20 @@ span .wpcf7-list-item label {
 	}
 	.subscribe_content__block__form{
 		margin-left:-10px;
+	}
+	/******    Subscription successful    ****/
+	.subscribe_sc_content_font{
+		width:285px;
+	}
+	.sub_sc_head, .sub_sc_second{
+		font-size:16pt;
+	}
+	.sub_sc_footer{
+		font-size:9.5pt;
+	}
+	.subscribe_sc_content__block__form{
+		margin-left:-15px;
+		padding:80px 5px;
 	}
 }
 @media (orientation: landscape) and (max-width:688px){
@@ -2729,6 +2753,10 @@ span .wpcf7-list-item label {
 	}
 	.sub_second{
 		margin-bottom:10px;
+	}
+	.subscribe_sc_content__block__form{
+		margin-top:20px;
+		padding:40px 60px;
 	}
 }
 @media (orientation: landscape) and (max-width:569px){
