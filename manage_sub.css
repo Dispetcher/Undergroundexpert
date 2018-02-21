@@ -30,3 +30,31 @@
 	margin-top:20px;
 	text-align:center;
 }
+@media(max-width:445px){
+	.subscribe_content_font{
+		text-align:center;
+	}
+	.mn_head, .mn_above{
+		margin-bottom:20px;
+	}
+	.mailpoet_select{
+		width:280px;
+		margin-left:-10px;
+	}
+	.mailpoet_paragraph input[type="text"]{
+		width:280px;
+	}
+}
+@media(max-width:390px){
+	.mailpoet_paragraph input[type="text"], .mailpoet_select{
+		width:265px;
+	}
+}
+@media(max-width:374px){
+	.mailpoet_paragraph input[type="text"], .mailpoet_select{
+		width:205px;
+	}
+	.mailpoet_text_label, .mailpoet_select_label{
+		margin-left:5px;
+	}
+}	
