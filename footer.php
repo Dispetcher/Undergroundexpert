@@ -21,6 +21,7 @@ if ($cl == "ru") {
 	}elseif ($id == '10001'){
 	}elseif ($id == '10005'){
 	}elseif ($id == '10071'){
+	}elseif ($id == '10077'){
 	}else{
 ?>
 
@@ -103,6 +104,12 @@ if ($cl == "ru") {
 <?php }; ?>
 
 		<?php wp_footer()?>
+		<?php if(get_the_ID() == '10077'){?>
+		<script src="<?php bloginfo('template_url')?>/js/manage_sub.js"></script>
+		<?php }else if(get_the_ID() == '235'){ ?>
+		<script src="<?php bloginfo('template_url')?>/js/sub.js"></script>
+		<?php };?>
+
         <script src="<?php bloginfo('template_url')?>/js/owlcarousel/owl.carousel.min.js"></script>
         <script src="<?php bloginfo('template_url')?>/js/fancybox/jquery.fancybox.pack.js"></script>
         <script src="<?php bloginfo('template_url')?>/js/masked.input.js"></script>
