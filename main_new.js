@@ -353,7 +353,7 @@
             });
 		//Feedback unsubscription
 		//Изначальное значение - неактивное
-	/*	var elmchk = $('#chkbx4 input');
+		var elmchk = $('#chkbx4 input');
 		$('#fbbtn').attr('disabled', 'disabled');
 		//Textarea
 		$('textarea#textarea_other').attr('disabled','disabled');	
@@ -363,9 +363,9 @@
 			}else{
 				$('textarea#textarea_other').attr('disabled','disabled');
 			}
-		});*/
+		});
 		//Feedback button
-	/*	$(document).on('click', function(){
+		$(document).on('click', function(){
 			if($('#chkbx1 input').is(':checked')){
 					$('#fbbtn').removeAttr('disabled');
 				}else if($('#chkbx2 input').is(':checked')){
@@ -374,10 +374,12 @@
 					$('#fbbtn').removeAttr('disabled');
 				}else if($('#chkbx4 input').is(':checked')){
 					$('#fbbtn').removeAttr('disabled');
+				}else if($('.mailpoet_select').val() === 'unsubscribed'){
+					$('#fbbtn').removeAttr('disabled');
 				}else{
 				$('#fbbtn').attr('disabled', 'disabled');	
 				};
-		});*/
+		});
 		//Redirect to reg-successful page
 		//Получаем св-во об успешной регистрации
 		$(".mailpoet_submit").on('click', function(){

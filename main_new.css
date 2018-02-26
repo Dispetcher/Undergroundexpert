@@ -1,4 +1,4 @@
-/* @Dispetcher, last edited 20.02*/
+/* @Dispetcher, last edited 26.02*/
 
 html {
     color: #222;
@@ -2038,12 +2038,11 @@ span .wpcf7-list-item label {
 }
 /******           Successful unsubscription page               *******/
 .unsubscribe_sc_content__block__form{
-	padding:40px;
+	padding:80px;
 	background-color:rgba(234,236,238,0.8);
 }
 .unsub_sc_frst, .unsub_sc_scnd{
 	font-size:18pt;
-	margin-bottom:8px;
 }
 .unsub_sc_frst{
 	letter-spacing:1.2px;
@@ -2058,11 +2057,18 @@ span .wpcf7-list-item label {
 	margin-bottom:0;
 }
 .unsub_sc_forth{
-	margin-bottom:40px;	
+	margin-bottom:30px;	
+}
+.unsub_sc_fifth{
+	margin-bottom:10px;
+	max-width:460px;
+	text-align:justify;
+	font-size:14pt;
 }
 .unsub_sc_footer{
 	font-size:12pt;
 	margin-bottom:10px;
+	margin-top:20px;
 }
 .unsub_sc_footer a{
 	color:#1da4df;
@@ -2083,6 +2089,32 @@ span .wpcf7-list-item label {
 }
 .reg_rows a{
 	color:#1da4df;
+}
+/*****   Contact_form - unsubscription details  *****/
+#textarea_other{
+	max-width:500px;
+	margin-top:10px;
+}
+#fbbtn{
+	text-align:center;
+}
+.wpcf7-form{
+	color:#204f6e;
+	font-family:'PT_Sans_Bold';
+}
+.sbmt_btn{
+	margin-top:-20px;
+	text-align:center;
+}
+.wpcf7-list-item{
+	font-size:10.5pt;
+	width:350px;
+}
+.wpcf7-list-item-label{
+	padding-left:15px;
+}
+.wpcf7-list-item label input{
+	height:12px;
 }
 /* ==========================================================================
    Media Queries
@@ -2420,6 +2452,22 @@ span .wpcf7-list-item label {
 	font-size:12pt;
 	letter-spacing:0.3px;
 	}
+	/******           Unsubscription page            *******/
+	.unsub_content{
+		height:auto;
+	}
+	.unsubscribe_sc_content__block__form{
+		margin-top:40px;	
+	}
+	.unsub_sc_frst, .unsub_sc_scnd{
+		font-size:14pt;
+	}
+	.unsub_sc_thrd, .unsub_sc_forth{
+		font-size:18pt;
+	}
+	.chkbx_unsubscribe{
+		line-height:2;
+	}
 }
 @media (max-width: 599px) {
     .main_slide_over br {
@@ -2521,6 +2569,13 @@ span .wpcf7-list-item label {
 	font-size:8.3pt;
 	margin:5px 0 0 0;
 	text-align:center;
+	}
+	/******           Unsubscription page            *******/
+	.unsub_content{
+		height:auto;
+	}
+	.unsubscribe_sc_content__block__form{
+		padding:40px;
 	}
 }
 @media (max-width: 479px) {
@@ -2671,11 +2726,27 @@ span .wpcf7-list-item label {
 	.sub_social_net{
 	text-align:center;
 	}
-	
 	.subscribe_sc_content__block__form{
 		margin-left:0;
 		padding:40px 20px;
 	}
+		/******           Unsubscription page            *******/
+	.unsub_content{
+		height:auto;
+	}
+	.unsubscribe_sc_content__block__form{
+		padding:40px 10px;	
+	}
+	.unsub_sc_frst, .unsub_sc_scnd{
+		font-size:13pt;
+	}
+	.unsub_sc_thrd, .unsub_sc_forth{
+		font-size:16pt;
+	}
+	.unsub_sc_footer{
+		font-size:11pt;
+	}
+	
 }
 @media(max-width:400px){
 	.subscribe_content__block__form{
@@ -2717,13 +2788,39 @@ span .wpcf7-list-item label {
 		margin-left:0;
 		padding:40px 20px;
 	}
+/******           Unsubscription page            *******/
+	.unsub_content{
+		height:auto;
+	}
+	.unsubscribe_sc_content__block__form{
+		padding:40px 5px;	
+	}
+	.unsub_sc_frst, .unsub_sc_scnd{
+		font-size:12pt;
+	}
+	.unsub_sc_thrd, .unsub_sc_forth{
+		font-size:14pt;
+	}
+	.unsub_sc_fifth{
+		font-size:12pt;
+		max-width:90vw;
+	}
+	.unsub_sc_footer{
+		font-size:10pt;
+	}
+	#textarea_other{
+		width:95%;
+	}
+	.wpcf7-list-item{
+		width:90vw;
+	}
 }
 @media(max-width:341px){
 	.subscribe_content_font{
 		width:290px;
 	}
 	.subscribe_content__block__form{
-		margin-left:-10px;
+		margin-left:0;
 	}
 	/******    Subscription successful    ****/
 	.subscribe_sc_content_font{
@@ -2739,6 +2836,17 @@ span .wpcf7-list-item label {
 		margin-left:-15px;
 		padding:80px 5px;
 	}
+			/******           Unsubscription page            *******/
+	.unsub_sc_frst{
+		letter-spacing:0;
+	}
+	.unsub_sc_frst, .unsub_sc_scnd{
+		font-size:11pt;
+	}
+	.unsub_sc_footer{
+		font-size:8.5pt;
+	}
+
 }
 @media (orientation: landscape) and (max-width:688px){
 	.subscribe_content__block__form{
@@ -2762,6 +2870,11 @@ span .wpcf7-list-item label {
 @media (orientation: landscape) and (max-width:569px){
 	.subscribe_content__block__form{
 		margin-top:60px;
+	}
+}
+@media (orientation: landscape) and (max-height:850px){
+	.unsub_content{
+		height:auto;
 	}
 }
 @media print,

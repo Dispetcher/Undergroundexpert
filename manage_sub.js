@@ -1,3 +1,4 @@
+/*  @Dispetcher last modified 26.02 */
 (function ($) {
     $(document).ready(function () {
     	//Subscription manage
@@ -10,6 +11,23 @@
 		//Change selector
 		$('.mailpoet_select option[value=subscribed]').html('Подписка оформлена');
 		$('.mailpoet_select option[value=unsubscribed]').html('Подписка отменена');
+		
+		//Unsubscription feedback
+		if($('.mailpoet_select').val() === 'unsubscribed'){
+			$('.wpcf7').css('display', 'block');
+		}else{
+			$('.wpcf7').css('display', 'none');
+		};
+		
+		$('.mailpoet_select').change(function(){
+			if($(this).val() === 'unsubscribed'){
+				$('.wpcf7').css('display', 'block');
+			}else{
+				$('.wpcf7').css('display', 'none');
+			}
+			;
+		});
+		
 	 });
 	$(document).ready(mmedia);
 	$(window).resize(mmedia);
