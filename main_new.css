@@ -1,4 +1,4 @@
-/* @Dispetcher, last edited 26.02*/
+/* @Dispetcher, last edited 30.03*/
 
 html {
     color: #222;
@@ -1849,6 +1849,7 @@ input:disabled {
 	margin-top: 5px;
 	border-radius: 3px;
 	text-align: left;
+	z-index:10;
 }
 .conf_agree {
     font-size: 12px;
@@ -2115,6 +2116,10 @@ span .wpcf7-list-item label {
 }
 .wpcf7-list-item label input{
 	height:12px;
+}
+/***        Table for metro of USSR          ***/
+#statsDescr tbody tr td input{
+	margin-right:5px;
 }
 /* ==========================================================================
    Media Queries
@@ -3018,4 +3023,8 @@ span .wpcf7-list-item label {
    ========================================================================== */
 #lead{
 	font-size: 16px;
+}
+.article_share .ya-share2__container_size_m .ya-share2__icon {
+    height: 40px;
+    width: 40px;
 }

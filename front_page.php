@@ -156,6 +156,7 @@ foreach ($tmp_colors as $result) {
                                 'offset' => 0,
                                 'cat' => '',
                                 'category__in' => get_field($articlesCategories),
+                                'category__not_in' => '202',
                                 'post_status' => 'publish',
                                 /*'orderby' => 'title',*/
                                 /*'order' => 'DESC',*/
@@ -209,7 +210,7 @@ foreach ($tmp_colors as $result) {
                                 <?php
                                   $args3 = array (
                                 'post_type' => 'post',
-                                'posts_per_page' => get_field($articlesCount),
+                                'posts_per_page' => 3,
                                 'offset' => 0,
                                 'category__in' => array(20),
                                 'post_status' => 'publish',

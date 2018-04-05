@@ -54,7 +54,17 @@ if ($cl == "ru") {
 						</div>
             </div><!--/.center_wrap-->	
 	        </footer><!--/#footer-->
-		<span class="to_top">Наверх</span>
+
+		<!-- Ресурсы страницы-->
+<?php if ( current_user_can( 'manage_options' ) ) { ?>
+<div style="position:fixed;z-index:999;top:50px;left:5px;padding:5px;font-size:7pt;color:#fff;background:#000;">
+<?php echo '<h6 style="font-size:7pt; margin:0">Loading time:'; timer_stop(1); echo 's/</h6>' ?>
+<?php echo '<h6 style="font-size:7pt; margin:0">Queries: '.get_num_queries().' /</h6>'; ?>
+<?php if (function_exists('memory_get_usage')) echo '<h6 style="font-size:7pt; margin:0">Memory used: '.round(memory_get_usage()/1024/1024, 2) . 'MB</h6>'; ?>
+</div>
+<?php } ?>
+
+	<span class="to_top">Наверх</span>
 		<div class="hidden">
 			
 			<div id="send_to_email" class="popup">
@@ -111,7 +121,9 @@ if ($cl == "ru") {
 		<?php };?>
 
         <script src="<?php bloginfo('template_url')?>/js/owlcarousel/owl.carousel.min.js"></script>
-        <script src="<?php bloginfo('template_url')?>/js/fancybox/jquery.fancybox.pack.js"></script>
+        <?php if(!in_category(14)):?>
+		<script src="<?php bloginfo('template_url')?>/js/fancybox/jquery.fancybox.pack.js"></script> 
+		<?php endif; ?>
         <script src="<?php bloginfo('template_url')?>/js/masked.input.js"></script>
         <script src="<?php bloginfo('template_url')?>/js/main_new.js"></script>
 		<script src="<?php bloginfo('template_url')?>/js/table_js.js"></script>

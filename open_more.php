@@ -46,11 +46,10 @@ endif;
 		
 global $posts_query;
 
-if($cat_id == '10'){
-	$cat_id = '';
-	$cat_not_arr = array(1, 18, 20);
+if($cat_id == '18'){
+	$cat_not_arr = array(1, 20, 188, 202);
 }else{
-	$cat_not_arr = array(1, 20);
+	$cat_not_arr = array(1, 18, 20, 188, 202);
 }
 
 $args2 = array (
@@ -68,7 +67,7 @@ $posts_query = new WP_Query($args2);
 	
 if ( $posts_query->have_posts() ) {
 	while ($posts_query->have_posts()) : $posts_query->the_post(); ?>
-		<div class="main_page_block <? echo $cat_id ?>">
+		<div class="main_page_block">
 			<div class="main_page_block_img">
 				<a href="<?php the_permalink();?>"><?php the_post_thumbnail('catalog-thumb')?></a>
 					<?php
@@ -94,9 +93,11 @@ if ( $posts_query->have_posts() ) {
 						$parent_cat_id = $parent_cat[0]->term_id;
 						$parent_cat_name = $parent_cat[0]->name;
 					?>
+					<?php if($cat_id =='' || $cat_id ==2 || $cat_id ==3 || $cat_id ==4 ){ ?>
 					<div class="main_page_block_cat" style="background-color: <?php if(isset($colors[$parent_cat_id])): echo $colors[$parent_cat_id]; else: echo 'green'; endif;?>;">
-                                                <a href="<?php echo get_term_link((int) $parent_cat_id, 'category')?>"><?php echo $parent_cat_name; ?></a>
+                    	<a href="<?php echo get_term_link((int) $parent_cat_id, 'category')?>"><?php echo $parent_cat_name; ?></a>
                     </div>
+					<?php } ?>
 			</div><!--/.main_page_block_img-->
 			<div class="main_page_block_info">
 				<p class="main_page_block_title"><a href="<?php the_permalink();?>"><?php the_title()?></a></p>
