@@ -396,19 +396,33 @@
 		});
 		
 		//Hide text in metrostroi_cat
-		let more_word = $('<div class="page_content_text_word"><span>Подробнее</span></div>');
+		let more_word = $('<div class="page_content_text_more"><span>Подробнее</span></div>');
+		let collapse_word = $('<div class="page_content_text_less"><span>Свернуть</span></div>');
 		let par = $(".page_content_text > p");
 		if(par.length > 1 ){
 			$.each(par, function(){
 				par.hide();
 				par.eq(0).show();
 				par.eq(0).append(more_word);
+				par.eq(par.length-1)
+					.append(collapse_word)
+					.css('float', 'left');				
+				$(".page_content_text_less").hide();
 			});
 		}	
-		$(document).on("click", ".page_content_text_word", function(){
+		$(document).on("click", ".page_content_text_more", function(){
 			par.show();
-			$(".page_content_text_word").hide();
+			$(".page_content_text_more").hide();			
+			$(".page_content_text_less").show();
 		});
+		$(document).on("click", ".page_content_text_less", function(){
+			$.each(par, function(){
+				par.hide();
+				par.eq(0).show();
+				$(".page_content_text_more").show();
+				$(".page_content_text_less").hide();
+			})
+		});		
 	});
 
     tag_cloud = ((typeof tag_cloud) === "undefined") ? [] : tag_cloud;
