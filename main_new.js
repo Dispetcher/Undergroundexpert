@@ -1,9 +1,13 @@
 (function ($) {
     $(document).ready(function () {
-        //Mobile menu
+		$( ".mailpoet_submit" ).click(function() {
+			yaCounter22183162.reachGoal('SUBSCRIBE');
+			return true;
+		});
+
+		//Mobile menu
 		$(document).on('click', '.mobile_menu_opener', function() {
 			$('.mobile_menu').stop(true, false).fadeToggle(300, function(){
-
 			});
 		});
         //Main slider
@@ -390,5 +394,33 @@
 				}
 			}, 2500);
 		});
+		
+		//Hide text in metrostroi_cat
+		let more_word = $('<div class="page_content_text_word"><span>Подробнее</span></div>');
+		let par = $(".page_content_text > p");
+		if(par.length > 1 ){
+			$.each(par, function(){
+				par.hide();
+				par.eq(0).show();
+				par.eq(0).append(more_word);
+			});
+		}	
+		$(document).on("click", ".page_content_text_word", function(){
+			par.show();
+			$(".page_content_text_word").hide();
+		});
 	});
+
+    tag_cloud = ((typeof tag_cloud) === "undefined") ? [] : tag_cloud;
+
+    $('#tag-cloud').jQCloud(tag_cloud, {
+        height: 295,
+		fontSize: {
+			from: 0.06,
+			to: 0.04
+		},
+        shape: 'elliptic',
+        removeOverflowing: false,
+        delay: 0
+    });
 })(jQuery);
