@@ -30,12 +30,15 @@ if ($cl == 'ru') {
 					<?php endif;?>
 					<?php get_template_part('includes/cat_main_article')?>
 					<p class="block_title no_border tac"><?=$newArticles?></p>
+					
+					<?php if($cat == 450 || $cat == 548): get_template_part('includes/cat_metro_content'); endif; ?>
+					
 					<div class="main_page_blocks">
 						<?php 
 							$args = array (
 								'post_type' => 'post',
 								'posts_per_page' => get_field('articles_count', 'category_'.$cat),
-								'offset' => 0,
+								'offset' => 0, // Начиная с поста № (0 - сначала)
 								'cat' => $cat,
 								'category__not_in' => array(20), //20 - Календарь мероприятий
 								'post_status'      => 'publish',
@@ -91,7 +94,9 @@ if ($cl == 'ru') {
 					get_template_part('includes/subscribe');
 				endif;
 				?>
-                <?php get_template_part('includes/cat_content')?>
+                <?php if($cat !== 450 && $cat !== 548):
+					get_template_part('includes/cat_content');
+				endif;?>
             </div><!--/.dtc.content_column-->
             <?php get_sidebar();?>
         </div><!--/.dt-->
