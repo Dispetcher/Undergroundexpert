@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+/* @Dispetcher, last edited 25.06*/
+=======
 /* @Dispetcher, last edited 06.06*/
+>>>>>>> 1241bfb689471edf1a12d5b40ca4242af4cd57b4
 
 html {
     color: #222;
@@ -53,7 +57,7 @@ textarea {
 
 
 /* ==========================================================================
-   Author's custom styles
+   Custom styles
    ========================================================================== */
 @font-face {
     font-family: 'PT_Sans';
@@ -268,6 +272,13 @@ img.alignleft, img.alignnone {
 }
 .page_content {
     max-width:925px;
+<<<<<<< HEAD
+}
+.lasteventslink{
+    color: #fff;
+    text-decoration: none;
+=======
+>>>>>>> 1241bfb689471edf1a12d5b40ca4242af4cd57b4
 }
 .tablesorter, .tablesorter thead, .tablesorter tbody, .tablesorter tfoot, tr, th, td {
     margin:0;
@@ -1821,7 +1832,11 @@ input:disabled {
     height: 50px;
     position: fixed;
     z-index: 100;
+<<<<<<< HEAD
+    bottom: 75px;
+=======
     bottom: 50px;
+>>>>>>> 1241bfb689471edf1a12d5b40ca4242af4cd57b4
     right: 50px;
     border-radius: 50%;
     text-indent: -999em;
@@ -1934,15 +1949,28 @@ span .wpcf7-list-item label {
 }
 .page_content_text{
     display: block;
+<<<<<<< HEAD
+    margin-left: 160px;
+    margin-bottom: 40px;
+    min-height: 140px;
+}
+.page_content_text_more, .page_content_text_less{
+    color: #60b1ca;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top:10px;
+=======
     margin-left: 10px;
     margin-bottom: 40px;
     min-height: 140px;
+>>>>>>> 1241bfb689471edf1a12d5b40ca4242af4cd57b4
 }
 .page_content_text_word{
     color: #60b1ca;
     font-weight: 600;
     cursor: pointer;
 }
+
 
 
 /******           Subscription page            *******/
@@ -2137,6 +2165,55 @@ span .wpcf7-list-item label {
 /***        Table for metro of USSR          ***/
 #statsDescr tbody tr td input{
     margin-right:5px;
+<<<<<<< HEAD
+}
+/***           Cookies           ***/
+#person_data{
+    position:fixed;
+    display:none;
+    bottom:0;
+    width:100%;
+    height:67px;
+    padding-top:4px;
+    background-color:#204f6e;
+    text-align:center;
+    z-index:5;
+    opacity: 0;
+    line-height: 1.4;
+}
+#person_data .center_wrap .dt span{
+    color:#fff;
+    font-size:12px;
+    font-weight:200;
+}
+.close_person_data{
+    cursor:pointer;
+}
+.close_person_data::before, .close_person_data::after{
+    position:absolute;
+    content:'';
+    top: 5px;
+    right: 40px;
+    height: 15px;
+    width: 2px;
+    background-color:#fff;
+    transform:rotate(45deg);
+}
+.close_person_data::after{
+    transform:rotate(-45deg);
+}
+.person_data_center{
+    width: 100%;
+    text-align: center;
+}
+/*** Hide_show subscribe button  ***/
+.hide_subscribe_btn{
+    display: none;
+}
+.en_main_event_block{
+    margin-bottom: 12px;
+=======
+>>>>>>> 1241bfb689471edf1a12d5b40ca4242af4cd57b4
 }
 /* ==========================================================================
    Media Queries
@@ -2692,6 +2769,17 @@ span .wpcf7-list-item label {
         display: block;
         margin-bottom: 10px;
     }
+<<<<<<< HEAD
+    .page_content_logo{
+        float: none;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .page_content_text{
+        margin-left:10px;
+    }
+=======
+>>>>>>> 1241bfb689471edf1a12d5b40ca4242af4cd57b4
     /******           Subscription page            *******/
     .subscribe_content__block__form{
     padding:40px 10px;

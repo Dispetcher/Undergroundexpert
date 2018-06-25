@@ -422,7 +422,33 @@
 				$(".page_content_text_more").show();
 				$(".page_content_text_less").hide();
 			})
+<<<<<<< HEAD
+		});
+		//Personal data popup window
+		var window_width = $(window).width();
+		var window_height = $(window).height();
+		var cook = $.cookie('uexpertperson');
+		//var cook_pos = window_height - 67;
+		$(window).scrollTop();
+		if (cook !== '1'){
+			if (window_width > 767){
+				setTimeout(function(){
+				$('#person_data').css('display','block').animate(
+					{opacity: 1}, 1200, 'swing');
+				}, 1500);
+			};
+			$('.close_person_data').on('click', function(e){
+				e.preventDefault();
+				$('#person_data').fadeOut(300);
+				$.cookie('uexpertperson', '1', {expires : 30});
+			});
+			/*$(document).scroll( function(){
+				$('#person_data').animate( {top: $(this).scrollTop() + cook_pos + 'px'}, 100);
+			});*/
+		};
+=======
 		});		
+>>>>>>> 1241bfb689471edf1a12d5b40ca4242af4cd57b4
 	});
 
     tag_cloud = ((typeof tag_cloud) === "undefined") ? [] : tag_cloud;
