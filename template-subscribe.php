@@ -19,12 +19,14 @@ $cl = pll_current_language();?>
 		$form_widget = new \MailPoet\Form\Widget();
 			echo $form_widget->widget(array('form' => 2, 'form_type' => 'php'));	
 	?>
+			<div class="g-recaptcha" data-sitekey="6Lfc5GAUAAAAAOo01Txn4igrep6giGkJ-PlDRxUD" data-callback="enableSubscrBtn"></div>
+			
 			<span class="subscribe_content_font sub_under_field">Подписываясь на рассылку, вы подтверждаете свое согласие на <a href="http://undergroundexpert.info/politika-konfidentsialnosti/">обработку персональных данных</a></span>
 			<h6 class="subscribe_content_font sub_under_field sub_mobile">Подписываясь на рассылку, вы подтверждаете свое согласие 	
-			</h6>
+			</h6>		
 			<h6 class="subscribe_content_font sub_under_field sub_mobile">на <a href="http://undergroundexpert.info/politika-konfidentsialnosti/">обработку персональных данных</a> 	
 			</h6>
-
+					
 			<h6 class="subscribe_content_font sub_ft_field">Рассылки от портала «Подземный эксперт» приходят не чаще 1 раза в неделю 	
 			</h6>
 			<h6 class="subscribe_content_font sub_ft_field sub_ft">и содержат подборку лучших статей, опубликованных за последнее время.

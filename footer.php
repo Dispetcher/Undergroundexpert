@@ -1,4 +1,7 @@
 <?php
+/*
+Template Name: Footer - Подвал
+*/
 $cl = pll_current_language();
 $id = get_the_ID();
 if ($cl == "ru") {
@@ -125,9 +128,48 @@ if ($cl == "ru") {
 		<script src="<?php bloginfo('template_url')?>/js/fancybox/jquery.fancybox.pack.js"></script> 
 		<?php endif; ?>
         <script src="<?php bloginfo('template_url')?>/js/masked.input.js"></script>
-        <script src="<?php bloginfo('template_url')?>/js/main_new.js"></script>
+        <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/jqcloud.min.css?v=2">
+        <script src="<?php bloginfo('template_url')?>/js/jqcloud.min.js"></script>
+        <script src="<?php bloginfo('template_url')?>/js/main_new.js?v=2"></script>
 		<script src="<?php bloginfo('template_url')?>/js/table_js.js"></script>
 		<?php the_field('yandex_metrika', 'options')?>
 		<?php the_field('google_analitics', 'options')?>
+
+		<script>
+		function enableSubscrBtn(){
+			document.querySelector('input[type="submit"].mailpoet_submit').disabled = false;
+		};			
+		</script>
+
+		<script>
+			/*$( "#btnSearch" ).click(function() {
+				varr = $('#searchform input#s').val();
+				console.log(varr);
+			});*/
+			function searchTrim(){
+				search_str = document.getElementById("s").value;
+				len = search_str.length - 1;
+				if ( search_str.indexOf(' ', len) != -1) {
+					search_str = search_str.substr(0,len);
+				}
+				if ( search_str.indexOf(' ', 0) != -1) {
+					search_str = search_str.substr(1,search_str.length);
+				}
+				document.getElementById('s').value = search_str;
+				console.log(document.getElementById("s").value);
+			}
+			document.getElementById("btnSearch").onclick = searchTrim;
+
+			var but = document.getElementById("btnSearch");
+			but.setAttribute("disabled", "disabled");
+			document.getElementById("s").addEventListener("input", function(){
+				var search_str = document.getElementById("s").value;
+				if(search_str.length != 0) {
+					but.disabled = false;
+				} else {
+					but.setAttribute("disabled", "disabled");
+				}
+			});
+		</script>
     </body>
 </html>

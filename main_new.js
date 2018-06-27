@@ -422,7 +422,6 @@
 				$(".page_content_text_more").show();
 				$(".page_content_text_less").hide();
 			})
-<<<<<<< HEAD
 		});
 		//Personal data popup window
 		var window_width = $(window).width();
@@ -446,11 +445,14 @@
 				$('#person_data').animate( {top: $(this).scrollTop() + cook_pos + 'px'}, 100);
 			});*/
 		};
-=======
-		});		
->>>>>>> 1241bfb689471edf1a12d5b40ca4242af4cd57b4
+		
+		// Subscription form
+		var submit_btn = $('input[type="submit"].mailpoet_submit');
+			submit_btn.attr('disabled', 'disabled');
+		
+/****** End of document.ready *******/		
 	});
-
+	
     tag_cloud = ((typeof tag_cloud) === "undefined") ? [] : tag_cloud;
 
     $('#tag-cloud').jQCloud(tag_cloud, {
