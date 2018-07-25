@@ -27,6 +27,8 @@ if ($cl == 'ru') {
     $interactiveMapText = "interactive_map_text";
     $interactiveMapButton = "interactive_map_button";
     $h1 = "seo_h1";
+	$btnRecentNews = "Открыть еще новости";
+	$recentNewsLink = "/opyt-podzemnogo-stroitelstva/poslednie-sobytiya/";
 } else {
     // Здесь текстовые константы для английской версии
     $slides = "slides-eng";
@@ -52,6 +54,8 @@ if ($cl == 'ru') {
     $interactiveMapText = "interactive_map_text-eng";
     $interactiveMapButton = "interactive_map_button-eng";
     $h1 = "seo_h1-eng";
+	$btnRecentNews = "More recent news";
+	$recentNewsLink = "/en/underground-space-use/recent-news/";
 }
 // Схема id-color,id-color,... 
 // Сначала разобъем на двойки, в качестве разделителя запятая
@@ -136,7 +140,7 @@ foreach ($tmp_colors as $result) {
                             <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
                         <?php endif; ?>
                     </div><!--/.main_event_blocks-->
-                    <a class="button" href="<?php the_field($lastEventsSubscribeLink)?>"><?php the_field($lastEventsSubscribe)?></a>
+                    <a class="button" href="<?php echo get_site_url().$recentNewsLink;?>"><?php echo $btnRecentNews?></a>
                 </div><!--/.main_events_block-->
             </div><!--/.dtc-->
         </div><!--/.dt-->
@@ -186,8 +190,8 @@ foreach ($tmp_colors as $result) {
 												$parent_cat_name = $parent_cat[0]->name;
                                             ?>
                                             
-                                                <div class="main_page_block_cat" style="background-color: <?php  if(isset($colors[$parent_cat_id])): echo $colors[$parent_cat_id]; else: echo 'green'; endif;?>;">
-                                                    <a href="<?php echo get_term_link((int) $parent_cat_id, 'category')?>"><?php echo $parent_cat_name;*/ ?></a>
+                                               <div class="main_page_block_cat" style="background-color: <?php  if(isset($colors[$parent_cat_id])): echo $colors[$parent_cat_id]; else: echo 'green'; endif;?>;">
+                                                    <a href="<?php echo get_term_link((int) $parent_cat_id, 'category')?>"><?php echo $parent_cat_name; ?></a>
                                                 </div> 
                                         
                                     </div><!--/.main_page_block_img-->
