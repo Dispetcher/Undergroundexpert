@@ -141,7 +141,9 @@ if ($cl == 'ru') {
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		
 		<!-- Browser lang -->
-		<script src="<?php bloginfo('template_url')?>/js/browser_lang.js"></script>	
+		<?php if(is_front_page()){?>
+			<script src="<?php bloginfo('template_url')?>/js/browser_lang.js"></script>	
+		<?php } ?>
 					 
         <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/normalize.min.css">
         <link rel="stylesheet" href="<?php bloginfo('template_url')?>/css/main_new.css">
@@ -161,7 +163,7 @@ if ($cl == 'ru') {
    		 		});
  			 });
 		</script>
-		
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 		<script src="<?php bloginfo('template_url')?>/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 		<?php wp_head();?>
     </head>

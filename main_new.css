@@ -1,4 +1,4 @@
-/* @Dispetcher, last edited 25.07*/
+/* @Dispetcher, last edited 08.08*/
 
 html {
     color: #222;
@@ -2541,6 +2541,10 @@ span .wpcf7-list-item label {
 	}
 	.chkbx_unsubscribe{
 		line-height:2;
+	}
+	/******* ONE SIGNAL Icon to hide *****/
+	#onesignal-bell-launcher{
+		display: none;
 	}
 }
 @media (max-width: 599px) {
