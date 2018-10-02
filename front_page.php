@@ -29,6 +29,9 @@ if ($cl == 'ru') {
     $h1 = "seo_h1";
 	$btnRecentNews = "Открыть еще новости";
 	$recentNewsLink = "/opyt-podzemnogo-stroitelstva/poslednie-sobytiya/";
+	$event_cat = 20;
+	$start_date = 'start_date';
+	$dates = 'dates';
 } else {
     // Здесь текстовые константы для английской версии
     $slides = "slides-eng";
@@ -56,6 +59,9 @@ if ($cl == 'ru') {
     $h1 = "seo_h1-eng";
 	$btnRecentNews = "More recent news";
 	$recentNewsLink = "/en/underground-space-use/recent-news/";
+	$event_cat = 188;
+	$start_date = 'start_date_eng';
+	$dates = 'dates_eng';
 }
 // Схема id-color,id-color,... 
 // Сначала разобъем на двойки, в качестве разделителя запятая
@@ -218,9 +224,9 @@ foreach ($tmp_colors as $result) {
                                 'post_type' => 'post',
                                 'posts_per_page' => 3,
                                 'offset' => 0,
-                                'category__in' => array(20),
+                                'category__in' => array($event_cat),
                                 'post_status' => 'publish',
-								'meta_key' => 'start_date',
+								'meta_key' => $start_date,
 								'meta_value' => date( "Ymd" ), 
 								'meta_compare' => '>',  
 								'orderby' => 'meta_value',
@@ -235,7 +241,7 @@ foreach ($tmp_colors as $result) {
 											<a href="<?php the_permalink();?>"><?php the_post_thumbnail('catalog-thumb')?></a>
                                         </div>
                                         <div class="dtc vat main_page_event_block_info">
-                                            <p class="main_page_event_date"><?php the_field('dates',$post->ID, true);?></p>
+                                            <p class="main_page_event_date"><?php the_field($dates)?></p>
                                             <p><a href="<?php the_permalink();?>"><?php the_title();?></a></p>
                                         </div><!--/.main_page_event_block_info-->
                                     </div><!--/.main_page_event_block-->    

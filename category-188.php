@@ -5,8 +5,10 @@ get_header();?>
 $cl = pll_current_language();
 if( $cl == ru ){
 $start_date = 'start_date';
+$event_cat_id = 20;
 }else{
 $start_date = 'start_date_eng';
+$event_cat_id = 188;
 }?>
 <div id="content_section">
     <div class="center_wrap">
@@ -24,9 +26,9 @@ $start_date = 'start_date_eng';
 					<?php 
 		  				$args = array (
                                 'post_type' => 'post',
-                                'posts_per_page' => '10',
+                                'posts_per_page' => 10,
                                 'offset' => 0,
-                                'category__in' => array(188),
+                                'category__in' => array($event_cat_id),
                                 'post_status' => 'publish',
 								'meta_key' => $start_date,
 								'meta_value' => date( "Ymd" ), 
